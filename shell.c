@@ -25,7 +25,7 @@ int execute(char **cmd)
 	{
 		if (execve(cmd[0], cmd, NULL) == -1)
 		{
-			perror("Error");
+			perror(cmd[0]);
 			exit(-1);
 		}
 	}
